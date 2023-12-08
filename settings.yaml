@@ -1,0 +1,11 @@
+app:
+  endpoint: "/api"
+  environment: prod
+  origins:
+    - "*"
+postgres:
+  user: inteamfit
+  password: inteamfit
+  database: inteamfit
+  host: localhost
+  port: 5432
