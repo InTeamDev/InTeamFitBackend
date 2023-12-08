@@ -4,8 +4,8 @@ app:
   origins:
     - "*"
 postgres:
-  user: inteamfit
-  password: inteamfit
-  database: inteamfit
+  user: postgres
+  password: RENdei1337
+  database: testback
   host: localhost
   port: 5432
