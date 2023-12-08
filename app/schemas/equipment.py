@@ -7,4 +7,4 @@ class Equipment(BaseModel):
     # описание оборудования
     description: str
     # точность распознавания
-    accuracy: float
+    accuracy: float    # я думаю это лучше переименовать в probability

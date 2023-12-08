@@ -18,6 +18,7 @@ async def predict_image(file: UploadFile = File(...), model_manager: ModelManage
     contents = await file.read()
     image = Image.open(io.BytesIO(contents))
     image_array = np.array(image)
+    image_array /= 255.0  # модель работает с числами от 0 до 1, поэтому все значения приведём к этому диапазону
     return await EquipmentService.recognize(image_array, model_manager.get_model())
     # try:
     #
