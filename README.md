@@ -12,8 +12,8 @@
 ### Клонирование репозитория
 
 ```bash
-git clone https://github.com/ZetoOfficial/star
-cd your-repository
+https://github.com/InTeamDev/InTeamFitBackend
+cd InTeamFitBackend
 ```
 
 ### Настройка виртуального окружения
@@ -29,17 +29,9 @@ source venv/bin/activate  # На Windows используйте `venv\Scripts\ac
 pip install -r requirements.txt
 ```
 
-### Переменные окружения
+### Переменные окружения ! ВАЖНО ! 
 
 Настройте необходимые переменные окружения в файле `settings.yaml`
-
-### Запуск базы данных через Docker Compose
-
-Если вы предпочитаете использовать Docker для запуска базы данных, убедитесь, что у вас установлен Docker и Docker Compose. Затем выполните следующую команду:
-
-```bash
-make up  # docker-compose -f docker-compose.yml up --build -d
-```
 
 ## Настройка базы данных
 
