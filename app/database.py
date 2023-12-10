@@ -7,17 +7,8 @@ from settings import load_settings
 
 settings = load_settings()
 
-SQLALCHEMY_DATABASE_URL = "postgresql+asyncpg://{}:{}@{}:{}/{}".format(
-    settings.postgres.user,
-    settings.postgres.password,
-    settings.postgres.host,
-    settings.postgres.port,
-    settings.postgres.database,
-)
-
-engine = create_async_engine(
-    SQLALCHEMY_DATABASE_URL, echo=settings.app.environment == "dev", pool_recycle=1800
-)
+engine = create_async_engine(settings.postgres.get_dsn(async_=True), echo=settings.app.environment == "dev",
+                             pool_recycle=1800)
 SessionLocal = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
 Base = declarative_base()
 metadata = MetaData()
