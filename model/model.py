@@ -5,7 +5,7 @@ from keras.models import load_model
 
 class ModelManager:
     def __init__(self):
-        model_path = os.path.join(os.path.dirname(__file__), "xception_model_new_dataset")
+        model_path = os.path.join(os.path.dirname(__file__), "xception_model_8_classes")
         self.model = load_model(model_path)
         print(f"Model loaded from {model_path}")
 

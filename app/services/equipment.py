@@ -13,10 +13,10 @@ class EquipmentService:
     @staticmethod
     async def recognize(image: np.array, model) -> list[Equipment]:
         """ Возвращает список наиболее вероятных оборудований """
-        print(image)
-        print(image.shape)
-        predictions = model.predict(image)
+        predictions = model.predict(image)[0]
+        print(predictions)
         top_predictions = sort_index(predictions)
+
         equipments = []
         # вообще это можно в БД, наверное, вынести
         for prediction_idx in top_predictions[:4]:
