@@ -23,6 +23,23 @@ class Postgres(BaseModel):
     database: str
     port: int
 
+    def get_dsn(self, async_: bool = False) -> str:
+        if async_:
+            return "postgresql+asyncpg://{}:{}@{}:{}/{}".format(
+                self.user,
+                self.password,
+                self.host,
+                self.port,
+                self.database,
+            )
+        return "postgresql://{}:{}@{}:{}/{}".format(
+            self.user,
+            self.password,
+            self.host,
+            self.port,
+            self.database,
+        )
+
 
 class Settings(BaseSettings):
     app: App
