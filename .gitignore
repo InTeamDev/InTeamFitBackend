@@ -2,3 +2,6 @@
 .vscode
 venv
 .venv
+settings.yaml
+__pychache__/
+__pychache__
