@@ -14,6 +14,7 @@ class App(BaseModel):
     environment: str
     origins: list[str]
     static_dir: str = "static"
+    ml_dir: str = 'xception_model'
 
 
 class Postgres(BaseModel):
