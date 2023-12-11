@@ -13,5 +13,6 @@ class Exercise(Base):
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     name = Column(String)
     description = Column(Text)
+    muscle_group = Column(String)
 
     workouts = relationship("WorkoutExercise", back_populates="exercise")

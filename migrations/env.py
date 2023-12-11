@@ -4,10 +4,11 @@ from alembic import context
 from sqlalchemy import engine_from_config, pool
 
 from app.database import Base
+from app.models import *
 
 from settings import load_settings
 
-sett = load_settings()
+settings = load_settings()
 # Set the target metadata to your models' metadata
 target_metadata = Base.metadata
 
@@ -20,7 +21,7 @@ config = context.config
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
-config.set_main_option("sqlalchemy.url", sett.DATABASE_DSN)
+config.set_main_option("sqlalchemy.url", settings.postgres.get_dsn())
 
 
 # Create a SQLAlchemy engine and sessionmaker
