@@ -1,8 +1,10 @@
-from fastapi import APIRouter
 from datetime import date
-from app.schemas.workout import Workout
-from app.schemas.exercise import Exercise
 from uuid import uuid4
+
+from fastapi import APIRouter
+
+from app.schemas.exercise import Exercise
+from app.schemas.workout import Workout
 
 workout_router = APIRouter()
 

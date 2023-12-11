@@ -29,6 +29,10 @@ source venv/bin/activate  # На Windows используйте `venv\Scripts\ac
 pip install -r requirements.txt
 ```
 
+### Загрузка модели
+
+Скачайте модель `xception_model` в папку `model`
+
 ### Переменные окружения ! ВАЖНО ! 
 
 Настройте необходимые переменные окружения в файле `settings.yaml`

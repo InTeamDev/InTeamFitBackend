@@ -1,4 +1,5 @@
 import numpy as np
+
 from app.schemas.equipment import Equipment
 
 
@@ -30,7 +31,7 @@ class EquipmentService:
     @staticmethod
     async def recognize(image: np.array, model) -> list[Equipment]:
         """ Returns a list of most probable equipments """
-        predictions = model.predict(image)
+        predictions = model.predict(image)[0]
         top_predictions = sort_index(predictions)
         return [
             EquipmentService.create_equipment(idx, predictions)
