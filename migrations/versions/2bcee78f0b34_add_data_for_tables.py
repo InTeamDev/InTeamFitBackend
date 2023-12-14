@@ -44,6 +44,36 @@ INSERT INTO exercises (id, name, description, muscle_group) VALUES
 ('073944f0-d221-4fa5-bfcd-731d59854b31', 'Отжимания на брусьях', 'Упражнение для трицепса', 'Руки'),
 ('f9141020-65e7-480c-aa63-1dd23e5188ff', 'Сгибание рук с гантелями "молоток"', 'Упражнение для бицепса и предплечий', 'Руки'),
 ('a3c9d1af-a23c-423f-9bb9-8ce8544b1139', 'Французский жим', 'Упражнение для трицепса', 'Руки');
+
+INSERT INTO workouts (id, title, date, notes) VALUES
+('8cb68237-400b-457b-a1bf-dce18348d887', 'СУПЕР ТРЕНИРОВКА НОГ', '2023-12-11', 'Some notes about the workout'),
+('c205578d-500e-4911-8227-9ea1d5500f41', 'СУПЕР ТРЕНИРОВКА ГРУДИ', '2023-12-13', 'Some notes about the workout'),
+('494cfa9a-aa4c-4a61-bd9d-83a217f17f55', 'СУПЕР ТРЕНИРОВКА СПИНЫ', '2023-12-15', 'Some notes about the workout'),
+
+('c32e7b2d-2187-40e7-83e1-a872aaeabb4d', 'ТРЕНИРОВКА НОГ', '2023-12-18', 'Some notes about the workout'),
+('9b552d1f-aa0f-4500-bb5c-17012ddbdfc3', 'ТРЕНИРОВКА ГРУДЬ', '2023-12-20', 'Some notes about the workout'),
+('44f526c8-7692-4d67-b283-1837ede9eba1', 'ТРЕНИРОВКА СПИНЫ', '2023-12-22', 'Some notes about the workout');
+    
+-- СУПЕР ТРЕНИРОВКА НОГ
+INSERT INTO workout_exercises (id, workout_id, exercise_id, sets, reps) VALUES
+('9beff827-49b7-4efd-ab2e-29766580683b', '8cb68237-400b-457b-a1bf-dce18348d887', 'a4808c93-e02e-4c60-8c7d-024f6c4501c3', 3, 10),
+('188e44b0-6808-4ff9-9160-ccfb91350a8e', '8cb68237-400b-457b-a1bf-dce18348d887', '3b48ff4f-7325-48df-be62-115d75fcf816', 3, 12),
+('75c35e46-b143-4322-972b-e7bfa5206c89', '8cb68237-400b-457b-a1bf-dce18348d887', '9d09f203-bd44-4d09-8441-3f87b6c4a2c7', 4, 10),
+('3f8c2846-bc4d-4383-acdd-ea8cbd63d894', '8cb68237-400b-457b-a1bf-dce18348d887', 'c4424e59-e5e1-45d9-9040-cea930057db7', 3, 8),
+('8dc5138b-c721-4477-bc82-33dca8ba5efe', '8cb68237-400b-457b-a1bf-dce18348d887', '97f5054f-1b29-42e5-895d-a6cf34cb45e8', 4, 15);
+
+-- СУПЕР ТРЕНИРОВКА ГРУДИ
+INSERT INTO workout_exercises (id, workout_id, exercise_id, sets, reps) VALUES
+('23beab0e-facc-4d90-9327-e94dfd39bafc', 'c205578d-500e-4911-8227-9ea1d5500f41', '2fa2fe3e-8646-44e7-9de1-4a04f68a1236', 3, 10),
+('e0b62c28-4c9b-4ad8-99fa-480f4da89224', 'c205578d-500e-4911-8227-9ea1d5500f41', 'a2ac9d8b-8728-478a-bd58-c565e1cc0558', 4, 15),
+('c3f2e939-9067-4627-a770-82161d042699', 'c205578d-500e-4911-8227-9ea1d5500f41', 'cbe5b728-7645-425c-840d-ba8975c89afd', 3, 12),
+('0989a943-b3c8-478f-91ef-b5fcc5f68c7d', 'c205578d-500e-4911-8227-9ea1d5500f41', '6fbf77ea-8c1f-4d51-a5c5-da01a7a30e8b', 3, 12);
+
+-- СУПЕР ТРЕНИРОВКА СПИНЫ
+INSERT INTO workout_exercises (id, workout_id, exercise_id, sets, reps) VALUES
+('ddbe2fb3-2dee-44b0-be97-438697b568cf', '494cfa9a-aa4c-4a61-bd9d-83a217f17f55', '4bd0666b-56e7-4e18-b757-504f4e76be1e', 4, 10),
+('cdfe8fee-95e9-4ae0-ad3e-61d46145235e', '494cfa9a-aa4c-4a61-bd9d-83a217f17f55', '08cd625b-399b-4798-b49a-27b7a6cd86b5', 3, 12),
+('05ca5207-9b0d-4f11-a7a9-f9041aba1df2', '494cfa9a-aa4c-4a61-bd9d-83a217f17f55', '9d04bb2f-8fc4-4975-ac0e-67eaa8257514', 3, 10);
     """)
     # ### end Alembic commands ###
 
